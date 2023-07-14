@@ -1,0 +1,146 @@
+@import '../../vendor/filament/filament/resources/css/app.css';
+@import url('https://use.typekit.net/ysg2zjx.css');
+
+html:not(.dark) .filament-sidebar{
+    @apply bg-brain-400 shadow-zinc-200;
+}
+
+.filament-sidebar-header::before{
+    background-image: none;
+}
+
+html:not(.dark) .filament-sidebar-header::before{
+    @apply bg-brain-500;
+}
+
+html:not(.dark) .filament-sidebar-nav li:not([class]) div{
+    @apply border-brain-500;
+}
+
+html:not(.dark) .filament-sidebar-nav .filament-sidebar-item:not(.filament-sidebar-item-active) a{
+    @apply text-brain-900;
+}
+
+html:not(.dark) .filament-sidebar-collapse-button,
+html:not(.dark) .filament-sidebar-close-button{
+    @apply text-brain-900;
+}
+
+.filament-login-page .bg-white\/50{
+    @apply bg-brain-400 border-none;
+}
+
+.filament-forms-markdown-editor-component textarea{
+    @apply font-mono;
+}
+
+.filament-forms-field-wrapper select:disabled,
+.filament-forms-field-wrapper input:disabled{
+    @apply opacity-30;
+}
+
+
+/* ANSWERS REPEATER HACK (smaller heights) */
+
+.answer-repeater header button{
+    @apply absolute bottom-0 right-0 m-1.5;
+}
+
+.answer-repeater header{
+    @apply h-0 border-none;
+}
+
+.answer-repeater ul .p-6{
+    @apply p-1;
+}
+
+.answer-repeater ul li.border{
+    @apply border-none shadow-none bg-gray-50 dark:bg-gray-900;
+}
+
+.answer-repeater ul .gap-6{
+    @apply gap-3;
+}
+
+.answer-repeater .filament-forms-field-wrapper{
+    @apply top-1/2 relative -translate-y-1/2;
+}
+
+
+
+
+/* BUTTONS */
+html .filament-button{
+    @apply shadow-button shadow-primary-700 active:shadow-none overflow-hidden leading-none transition active:translate-y-1 select-none focus:ring-0;
+}
+
+html .filament-button:active{
+    box-shadow: 0 0 0 rgb(0 0 0);
+}
+
+html .filament-button.bg-danger-600{
+    @apply shadow-danger-700;
+}
+
+html .filament-button.border-gray-300{
+    @apply shadow-gray-300;
+}
+
+html.dark .filament-button.border-gray-300{
+    @apply shadow-gray-600;
+}
+
+html .filament-forms-date-time-picker-component button:disabled{
+    @apply opacity-30;
+}
+/* html .filament-page-actions button:nth-child(2){
+    --tw-shadow-color: #4b5563;
+    --tw-shadow: var(--tw-shadow-colored);
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+} */
+
+/* CUSTOM COLORS */
+.q_choice{
+    @apply bg-blue-100 text-blue-700;
+}
+.q_truefalse{
+    @apply bg-amber-100 text-amber-700;
+}
+.q_blank{
+    @apply bg-green-100 text-green-700;
+}
+
+.floating-navigation{
+    @apply 2xl:fixed 2xl:left-[5.5rem] 2xl:top-1/2 2xl:-translate-y-1/2 2xl:bg-transparent 2xl:border-none 2xl:!shadow-none 2xl:hover:!bg-transparent 2xl:focus:!ring-0 2xl:focus:!ring-offset-0 2xl:!transition-none 2xl:active:!translate-y-0;
+}
+
+.floating-navigation .filament-button-icon{
+    @apply 2xl:hidden;
+}
+
+@media(min-width: 1536px){
+    .floating-navigation:before{
+        content: url("data:image/svg+xml,%3Csvg width='29' height='24' viewBox='0 0 29 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27 13.5C27.8284 13.5 28.5 12.8284 28.5 12C28.5 11.1716 27.8284 10.5 27 10.5V13.5ZM0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM27 10.5H2V13.5H27V10.5Z' fill='black'/%3E%3C/svg%3E%0A");
+    }
+}
+
+.floating-navigation span{
+    @apply 2xl:hidden;
+}
+
+.filament-sidebar-open + div .floating-navigation-l{
+    @apply 2xl:left-[20rem];
+}
+
+.floating-navigation-r{
+    @apply 2xl:left-auto 2xl:right-0 2xl:rotate-180;
+}
+
+.table-date-text{
+    @apply font-mono tracking-tighter text-zinc-400 text-xs;
+}
+
+.filament-forms-repeater-component-item header p{
+    @apply max-w-[90%];
+}
